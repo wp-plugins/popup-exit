@@ -1,0 +1,165 @@
+/*** Base ***/
+
+.m-1.cc-pu-bg {
+	display: block;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background:#000;
+	opacity:0.5;
+}
+#poststuff .cc-pu-bg {
+	position: absolute;
+}
+#poststuff .modal-inner h2, #poststuff .modal-inner h3 {
+	color: inherit;
+	float: none;
+}
+
+.m-1 a, .m-1 a:hover {
+	text-decoration: none;
+}
+
+/*** General ***/
+
+.m-1.pop-up-cc {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	top: 25px;
+	height: auto;
+	display: block;
+	z-index: 99999;
+	font-size: 14px;
+}
+.chch-close-big.m-1.pop-up-cc {
+	margin-left: -392px;
+	width: 784px;
+}
+.chch-close-small.m-1.pop-up-cc {
+	margin-left: -325px;
+	width: 650px;
+}
+.m-1 .modal-inner {
+	font-size: 14px;
+	text-align: center;
+}
+.chch-close-big.m-1 .modal-inner {
+  padding: 45px 30px 25px 30px;
+}
+.chch-close-small.m-1 .modal-inner {
+  padding: 45px 35px 25px 35px;
+}
+.m-1 .modal-inner:before, .m-1 .modal-inner:after {
+	content: " ";
+	display: table;
+}
+.m-1 .modal-inner:after {
+	clear: both;
+}
+
+/*** Close Button ***/
+
+.m-1 .cc-pu-close {
+	position: absolute;
+	display: block;
+	z-index: 50;
+	cursor: pointer;
+}
+
+/*** Headers ***/
+
+.m-1 .modal-inner h3 {
+	margin: 20px 0 1.5em 0;
+}
+
+/*** Content ***/
+
+.m-1 .modal-inner p {
+	margin: 1em 0px;
+}
+
+/*** Buttons ***/
+
+.m-1 .modal-inner ul {
+	display: block;
+	text-align: center;
+	margin: 2.5em 0 1.07143em 0;
+	padding: 0;
+	list-style-type: none;
+}
+.m-1 .modal-inner li {
+	padding: 0 2px;
+	margin: 0 auto;
+	display: inline-block;
+}
+.m-1 .modal-inner li a {
+	text-decoration: none;
+	display: table-cell;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+.m-1 .modal-inner li a small {
+	display: block;
+	font-weight: 400;
+	text-transform: none;
+	margin-top: 0px;
+}
+
+/*** Media ***/
+
+@media (max-width: 992px) {
+	.chch-close-big .m-1 .modal-inner {
+		width: 650px;
+		padding: 40px;
+		margin-left: -325px;
+	}
+	.chch-close-small .m-1 .modal-inner {
+		width: 650px;
+		padding: 40px;
+		margin-left: -325px;
+	}
+}
+@media (max-width: 767px) {
+	.cc-pu-bg {
+		position: fixed;
+	}
+	.m-1 .modal-inner {
+		position: absolute;
+		width: 90%;
+		padding: 40px 20px;
+		margin-left: 5%;
+		left: 0;
+		top: 50px;
+	}
+	.m-1 .modal-inner .pop-up-cc h2 {
+		font-size: 30px;
+		margin-top: 15px;
+	}
+	.m-1 .modal-inner  h2 {
+		font-size: 25px !important;
+		margin-top: 40px !important;
+	}
+	.m-1 .modal-inner  h2 br {
+		display: none;
+	}
+	.m-1 .modal-inner  h3 {
+		font-size: 18px;
+	}
+	.m-1 .modal-inner  h3 br {
+		display: none;
+	}
+	.m-1 .modal-inner li a {
+		width: auto !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+

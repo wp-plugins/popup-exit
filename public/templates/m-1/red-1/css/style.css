@@ -1,0 +1,115 @@
+/*** Base ***/
+
+.red-1 a, .red-1 a:hover {
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Signika' !important;
+}
+
+/*** General ***/
+
+.red-1 .modal-inner {
+  background: #ea3434;
+  color: #fff;
+  font-family: 'Signika' !important;
+}
+
+/*** Close Button ***/
+
+.red-1 .cc-pu-close {
+	top: 0px;
+	right: 0px;
+}
+.chch-close-big.red-1 .cc-pu-close {
+	width: 36px;
+	height: 36px;
+	padding: 8px 10px !important;
+}
+.chch-close-small.red-1 .cc-pu-close {
+	width: 30px;
+	height: 30px;
+	padding: 5px 8px !important;
+}
+.red-1 .cc-pu-close i {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.red-1 .modal-inner h2 {
+	color: #fff !important;
+	font-family: 'Signika' !important;
+	font-weight: 300 !important;
+	line-height: 1.1em !important;
+}
+.chch-close-big.red-1 .modal-inner h2 {
+	font-size: 3.21429em !important;
+	margin-top: 1.07143em !important;
+	font-family: 'Signika' !important;
+}
+.chch-close-small.red-1 .modal-inner h2 {
+	font-size: 2.5em !important;
+	margin: 0.85714em 0 0.2em 0 !important;
+	font-family: 'Signika' !important;
+}
+
+/*** Secondary ***/
+
+.red-1 .modal-inner h3 {
+	color: #fff !important;
+	font-family: 'Signika' !important;
+	font-weight: 300 !important;
+	line-height: 1.3em !important;
+}
+.chch-close-big.red-1 .modal-inner h3 {
+	font-size: 1.42857em !important;
+	font-family: 'Signika' !important;
+}
+.chch-close-small.red-1 .modal-inner h3 {
+	font-size: 1.3em !important;
+	font-family: 'Signika' !important;
+}
+/*** Content ***/
+
+.red-1 .modal-inner p {
+	color: #fff !important;
+	font-family: 'Signika' !important;
+	font-size: 14px !important;
+}
+
+/*** Buttons ***/
+
+.chch-close-big.red-1 .modal-inner li a {
+	width: 244px;
+	height: 69px;
+	font-size: 1.14286em;
+	font-family: 'Signika' !important;
+}
+.chch-close-small.red-1 .modal-inner li a {
+	width: 170px !important;
+	height: 60px !important;
+	font-size: 1.14286em;
+	font-family: 'Signika' !important;
+}
+.red-1 .modal-inner li a.cc-pu-btn-left {
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+	font-family: 'Signika' !important;
+}
+.red-1 .modal-inner li a.cc-pu-btn-right {
+	background: #fff;
+	border: 1px solid #fff;
+	color: #000;
+	font-family: 'Signika' !important;
+}
+.red-1 .modal-inner li a span {
+	font-family: 'Signika' !important;
+}
+.red-1 .modal-inner li a small {
+	font-family: 'Signika' !important;
+}

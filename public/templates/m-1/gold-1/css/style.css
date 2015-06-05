@@ -1,0 +1,121 @@
+/*** Base ***/
+
+.gold-1 a, .gold-1 a:hover {
+  color: #989898;
+  font-weight: normal;
+}
+
+/*** General ***/
+
+.gold-1 .modal-inner {
+	background-color: #fff;
+	color: #989898;
+}
+
+/*** Close Button ***/
+
+.gold-1 .cc-pu-close {
+	background-color: #090909;
+	top: 7px;
+	right: 7px;
+}
+.chch-close-big.gold-1 .cc-pu-close {
+	width: 36px;
+	height: 36px;
+	padding: 8px 10px !important;
+}
+.chch-close-small.gold-1 .cc-pu-close {
+	width: 30px;
+	height: 30px;
+	padding: 5px 8px !important;
+}
+.gold-1 .cc-pu-close i {
+  color: #ffe96d;
+  font-size: 20px;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.gold-1 .modal-inner h2 {
+	color: #090909 !important;
+	font-family: 'Playfair Display' !important;
+	font-weight: 300 !important;
+	line-height: 1.25em !important;
+}
+.gold-1 .modal-inner h2 strong {
+	color: #ffe96d !important;
+	font-family: 'Playfair Display' !important;
+}
+.chch-close-big.gold-1 .modal-inner h2 {
+	font-size: 3.21429em !important;
+	margin-top: 1.07143em !important;
+	font-family: 'Playfair Display' !important;
+}
+.chch-close-small.gold-1 .modal-inner h2 {
+	font-size: 2.5em !important;
+	margin: 0.85714em 0 0.2em 0 !important;
+	font-family: 'Playfair Display' !important;
+}
+
+/*** Secondary ***/
+
+.gold-1 .modal-inner h3 {
+	font-family: 'Playfair Display' !important;
+	color: #090909 !important;
+	font-weight: 300 !important;
+	line-height: 1.3em !important;
+}
+.chch-close-big.gold-1 .modal-inner h3 {
+	font-size: 1.42857em !important;
+	font-family: 'Playfair Display' !important;
+}
+.chch-close-small.gold-1 .modal-inner h3 {
+	font-size: 1.3em !important;
+	font-family: 'Playfair Display' !important;
+}
+
+/*** Content ***/
+
+.gold-1 .modal-inner p {
+  color: #989898 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+}
+
+/*** Buttons ***/
+
+.chch-close-big.gold-1 .modal-inner li a {
+	width: 244px;
+	height: 69px;
+	font-size: 1.14286em;
+	font-family: 'Open Sans' !important;
+}
+.chch-close-small.gold-1 .modal-inner li a {
+	width: 170px !important;
+	height: 60px !important;
+	font-size: 1.14286em;
+	font-family: 'Open Sans' !important;
+}
+.gold-1 .modal-inner li a.cc-pu-btn-left {
+	background: #ffe96d;
+	border: 1px solid #e0e0e0;
+	color: #090909;
+	font-family: 'Open Sans' !important;
+}
+.gold-1 .modal-inner li a.cc-pu-btn-right {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	color: #090909;
+	font-family: 'Open Sans' !important;
+}
+.gold-1 .modal-inner li a span {
+	font-family: 'Playfair Display' !important;
+	font-weight: bold;
+}
+.gold-1 .modal-inner li a small {
+	font-family: 'Open Sans' !important;
+}
+
+

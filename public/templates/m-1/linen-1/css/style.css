@@ -1,0 +1,117 @@
+/*** Base ***/
+
+.linen-1 a, .linen-1 a:hover {
+	color: #090909;
+	font-weight: bold;
+	font-family: 'Lora' !important;
+}
+
+/*** General ***/
+
+.linen-1 .modal-inner {
+	background: #efede7;
+	color: #090909;
+	font-family: 'Lora' !important;
+}
+
+/*** Close Button ***/
+
+.linen-1 .cc-pu-close {
+	background-color: #514b31;
+	top: 0px;
+	right: 0px;
+}
+.chch-close-big.linen-1 .cc-pu-close {
+	width: 36px;
+	height: 36px;
+	padding: 8px 10px !important;
+}
+.chch-close-small.linen-1 .cc-pu-close {
+	width: 30px;
+	height: 30px;
+	padding: 5px 8px !important;
+}
+.linen-1 .cc-pu-close i {
+	color: #fff;
+	font-size: 20px;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.linen-1 .modal-inner h2 {
+	color: #090909 !important;
+	font-family: 'Lora' !important;
+	font-weight: 300 !important;
+	line-height: 1.1em !important;
+}
+.chch-close-big.linen-1 .modal-inner h2 {
+	font-size: 3.21429em !important;
+	margin-top: 1.07143em !important;
+	font-family: 'Lora' !important;
+}
+.chch-close-small.linen-1 .modal-inner h2 {
+	font-size: 2.1em !important;
+	margin: 0.85714em 0 0.2em 0 !important;
+	font-family: 'Lora' !important;
+}
+
+/*** Secondary ***/
+
+.linen-1 .modal-inner h3 {
+	color: #090909 !important;
+	font-family: 'Lora' !important;
+	font-weight: 300 !important;
+	line-height: 1.3em !important;
+}
+.chch-close-big.linen-1 .modal-inner h3 {
+	font-size: 1.42857em !important;
+	font-family: 'Lora' !important;
+}
+.chch-close-small.linen-1 .modal-inner h3 {
+	font-size: 1.3em !important;
+	font-family: 'Lora' !important;
+}
+
+/*** Content ***/
+
+.linen-1 .modal-inner p {
+	color: #090909 !important;
+	font-family: 'Lora' !important;
+	font-size: 14px !important;
+}
+
+/*** Buttons ***/
+
+.chch-close-big.linen-1 .modal-inner li a {
+	width: 244px;
+	height: 69px;
+	font-size: 1.14286em;
+	font-family: 'Lora' !important;
+}
+.chch-close-small.linen-1 .modal-inner li a {
+	width: 170px !important;
+	height: 60px !important;
+	font-size: 1.14286em;
+	font-family: 'Lora' !important;
+}
+.linen-1 .modal-inner li a.cc-pu-btn-left {
+	background: #514b31;
+	border: 1px solid #e0e0e0;
+	color: #fff;
+	font-family: 'Lora' !important;
+}
+.linen-1 .modal-inner li a.cc-pu-btn-right {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	color: #514b31;
+	font-family: 'Lora' !important;
+}
+.linen-1 .modal-inner li a span {
+	font-family: 'Lora' !important;
+}
+.linen-1 .modal-inner li a small {
+	font-family: 'Lora' !important;
+}
+

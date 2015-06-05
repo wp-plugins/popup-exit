@@ -1,0 +1,124 @@
+/*** Base ***/
+
+.white-1 a, .white-1 a:hover {
+  color: #000;
+  font-weight: bold;
+  font-family: 'Open Sans' !important;
+}
+
+/*** General ***/
+
+.white-1 .modal-inner {
+	color: #000;
+	background: #fff;
+	font-family: 'Open Sans' !important;
+}
+
+/*** Close Button ***/
+
+.white-1 .cc-pu-close {
+	background-color: #000;
+	top: 0px;
+	right: 0px;
+}
+.chch-close-big.white-1 .cc-pu-close {
+	width: 36px;
+	height: 36px;
+	padding: 8px 10px !important;
+}
+.chch-close-small.white-1 .cc-pu-close {
+	width: 30px;
+	height: 30px;
+	padding: 5px 8px !important;
+}
+.white-1 .cc-pu-close i {
+	color: #fff;
+	font-size: 20px;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.white-1 .modal-inner h2 {
+	color: #000 !important;
+	font-family: 'Oswald' !important;
+	font-weight: 700 !important;
+	line-height: 1.12em !important;
+	text-transform: uppercase !important;
+}
+.chch-close-big.white-1 .modal-inner h2 {
+	font-size: 3.21429em !important;
+	margin-top: 1.07143em !important;
+	text-transform: uppercase !important;
+	font-family: 'Oswald' !important;
+
+}
+.chch-close-small.white-1 .modal-inner h2 {
+	font-size: 2.5em !important;
+	margin: 0.85714em 0 1em 0 !important;
+	text-transform: uppercase !important;
+	font-family: 'Oswald' !important;
+
+}
+
+/*** Secondary ***/
+
+.white-1 .modal-inner h3 {
+	color: #000 !important;
+	font-family: 'Oswald' !important;
+	font-weight: 300 !important;
+	line-height: 1.4em !important;
+	text-transform: uppercase !important;
+}
+.chch-close-big.white-1 .modal-inner h3 {
+	font-size: 1.42857em !important;
+	text-transform: uppercase !important;
+	font-family: 'Oswald' !important;
+}
+.chch-close-small.white-1 .modal-inner h3 {
+	font-size: 1.3em !important;
+	text-transform: uppercase !important;
+	font-family: 'Oswald' !important;
+}
+
+/*** Content ***/
+
+.white-1 .modal-inner p {
+  color: #989898 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+}
+
+/*** Buttons ***/
+
+.chch-close-big.white-1 .modal-inner li a {
+	width: 244px;
+	height: 69px;
+	font-size: 1.14286em;
+	font-family: 'Open Sans' !important;
+}
+.chch-close-small.white-1 .modal-inner li a {
+  width: 170px !important;
+  height: 60px !important;
+  font-size: 1.14286em;
+  font-family: 'Open Sans' !important;
+}
+.white-1 .modal-inner li a.cc-pu-btn-left {
+	background: #000;
+	border: 1px solid #989898;
+	color: #fff;
+	font-family: 'Open Sans' !important;
+}
+.white-1 .modal-inner li a.cc-pu-btn-right {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	color: #000;
+	font-family: 'Open Sans' !important;
+}
+.white-1 .modal-inner li a span {
+	font-family: 'Oswald' !important;
+}
+.white-1 .modal-inner li a small {
+	font-family: 'Open Sans' !important;
+}

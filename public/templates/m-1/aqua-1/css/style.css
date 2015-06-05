@@ -1,0 +1,135 @@
+/*** Base ***/
+
+.aqua-1 a, .aqua-1 a:hover {
+  color: #090909;
+  font-weight: normal;
+  font-family: 'Roboto' !important;
+}
+
+/*** General ***/
+
+.aqua-1 .modal-inner {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #090909;
+	font-family: 'Roboto' !important;
+}
+
+/*** Close Button ***/
+
+.aqua-1 .cc-pu-close {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-radius: 3px;
+	background-color: #59D5EF;
+	top: 7px;
+	right: 7px;
+}
+.chch-close-big.aqua-1 .cc-pu-close {
+	width: 36px;
+	height: 36px;
+	padding: 8px 10px !important;
+}
+.chch-close-small.aqua-1 .cc-pu-close {
+	width: 30px;
+	height: 30px;
+	padding: 5px 8px !important;
+}
+.aqua-1 .cc-pu-close i {
+	color: #fff;
+	font-size: 20px;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.aqua-1 .modal-inner h2 {
+	color: #090909;
+	font-weight: 300 !important;
+	line-height: 1.1em !important;
+	font-family: 'Roboto' !important;
+}
+.aqua-1 .modal-inner h2 strong {
+	color: #59d5f0 !important;
+	font-family: 'Roboto' !important;
+}
+.chch-close-big.aqua-1 .modal-inner h2 {
+	font-size: 3.21429em !important;
+	margin-top: 1.07143em !important;
+	font-family: 'Roboto' !important;
+}
+.chch-close-small.aqua-1 .modal-inner h2 {
+	font-size: 2.1em !important;
+	margin: 0.85714em 0 0.2em 0 !important;
+	font-family: 'Roboto' !important;
+}
+
+/*** Secondary ***/
+
+.aqua-1 .modal-inner h3 {
+	color: #090909 !important;
+	font-weight: 300 !important;
+	line-height: 1.4em !important;
+	font-family: 'Roboto' !important;
+}
+.chch-close-big.aqua-1 .modal-inner h3 {
+	font-size: 1.42857em !important;
+	font-family: 'Roboto' !important;
+}
+.chch-close-small.aqua-1 .modal-inner h3 {
+	font-size: 1.3em !important;
+	font-family: 'Roboto' !important;
+}
+
+/*** Content ***/
+
+.aqua-1 .modal-inner p {
+	color: #090909 !important;
+	font-family: 'Roboto' !important;
+	font-size: 14px !important;
+}
+
+/*** Buttons ***/
+
+.chch-close-big.aqua-1 .modal-inner li a {
+	width: 244px;
+	height: 69px;
+	font-size: 1.14286em;
+	font-family: 'Roboto' !important;
+}
+.chch-close-small.aqua-1 .modal-inner li a {
+	width: 170px !important;
+	height: 60px !important;
+	font-size: 1.14286em;
+	font-family: 'Roboto' !important;
+}
+.aqua-1 .modal-inner li a.cc-pu-btn-left {
+	background: #59d5f0;
+	border: 1px solid #59d5f0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-family: 'Roboto' !important;
+}
+.aqua-1 .modal-inner li a.cc-pu-btn-right {
+	background: #fff;
+	border: 1px solid #dfdfdf;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #090909;
+	font-family: 'Roboto' !important;
+}
+.aqua-1 .modal-inner li a span {
+	font-family: 'Roboto' !important;
+	font-weight: bold;
+}
+.aqua-1 .modal-inner li a small {
+	font-family: 'Roboto' !important;
+}
+
