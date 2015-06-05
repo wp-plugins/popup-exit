@@ -8,7 +8,7 @@
  * @copyright 2014 
  *
  * @wordpress-plugin
- * Plugin Name:       Pop-Up CC - Close FREE
+ * Plugin Name:       Pop-Up CC Exit Free
  * Plugin URI:        http://shop.chop-chop.org
  * Description:       An elegant Pop Up in just a few clicks.
  * Version:           1.0.0

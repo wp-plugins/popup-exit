@@ -38,17 +38,18 @@
 	z-index: 99999;
 	font-size: 14px;
 }
-.chch-close-big.m-1.pop-up-cc {
+.chch-close-big.m-1  {
 	margin-left: -392px;
 	width: 784px;
 }
-.chch-close-small.m-1.pop-up-cc {
+.chch-close-small.m-1  {
 	margin-left: -325px;
 	width: 650px;
 }
 .m-1 .modal-inner {
 	font-size: 14px;
 	text-align: center;
+	position: relative;
 }
 .chch-close-big.m-1 .modal-inner {
   padding: 45px 30px 25px 30px;
@@ -115,29 +116,37 @@
 /*** Media ***/
 
 @media (max-width: 992px) {
-	.chch-close-big .m-1 .modal-inner {
+	.chch-close-big.m-1 {
 		width: 650px;
-		padding: 40px;
+		
 		margin-left: -325px;
 	}
-	.chch-close-small .m-1 .modal-inner {
-		width: 650px;
-		padding: 40px;
+	.chch-close-small.m-1 {
+		width: 650px; 
 		margin-left: -325px;
+	}
+	
+	.m-1 .modal-inner  {
+		padding: 40px;
 	}
 }
 @media (max-width: 767px) {
 	.cc-pu-bg {
 		position: fixed;
 	}
-	.m-1 .modal-inner {
+	.chch-close-small.m-1, .chch-close-big.m-1 {
 		position: absolute;
 		width: 90%;
-		padding: 40px 20px;
+		
 		margin-left: 5%;
 		left: 0;
 		top: 50px;
 	}
+	
+	.m-1 .modal-inner  {
+		padding: 40px 20px;
+	}
+	
 	.m-1 .modal-inner .pop-up-cc h2 {
 		font-size: 30px;
 		margin-top: 15px;
