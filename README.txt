@@ -1,4 +1,4 @@
-=== Pop-Up CC Exit Free ===
+=== Pop-Up CC Exit ===
 
 
 Contributors: chopchoporg
