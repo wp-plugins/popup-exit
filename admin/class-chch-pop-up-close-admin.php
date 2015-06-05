@@ -177,24 +177,24 @@ class ChChPopUpCloseAdmin {
 		$domain = $this->plugin_slug;
 		
 		$labels = array(
-			'name'                => _x( 'Pop-Up CC - Close FREE', 'Post Type General Name', $domain),
-			'singular_name'       => _x( 'Pop-Up CC - Close FREE', 'Post Type Singular Name', $domain),
-			'menu_name'           => __( 'Pop-Up CC - Close FREE', $domain),
+			'name'                => _x( 'Pop-Up CC Exit Free', 'Post Type General Name', $domain),
+			'singular_name'       => _x( 'Pop-Up CC Exit Free', 'Post Type Singular Name', $domain),
+			'menu_name'           => __( 'Pop-Up CC Exit Free', $domain),
 			'parent_item_colon'   => __( 'Parent Item:', $domain),
-			'all_items'           => __( 'Pop-Up CC - Close FREE', $domain),
+			'all_items'           => __( 'Pop-Up CC Exit Free', $domain),
 			'view_item'           => __( 'View Item', $domain),
-			'add_new_item'        => __( 'Add New Pop-Up CC - Close FREE', $domain),
-			'add_new'             => __( 'Add New Pop-Up CC - Close FREE', $domain),
-			'edit_item'           => __( 'Edit Pop-Up CC - Close FREE', $domain),
-			'update_item'         => __( 'Update Pop-Up CC - Close FREE', $domain),
-			'search_items'        => __( 'Search Pop-Up CC - Close FREE', $domain),
+			'add_new_item'        => __( 'Add New Pop-Up CC Exit Free', $domain),
+			'add_new'             => __( 'Add New Pop-Up CC Exit Free', $domain),
+			'edit_item'           => __( 'Edit Pop-Up CC Exit Free', $domain),
+			'update_item'         => __( 'Update Pop-Up CC Exit Free', $domain),
+			'search_items'        => __( 'Search Pop-Up CC Exit Free', $domain),
 			'not_found'           => __( 'Not found', $domain),
-			'not_found_in_trash'  => __( 'No Pop-Up CC - Close FREE found in Trash', $domain),
+			'not_found_in_trash'  => __( 'No Pop-Up CC Exit Free found in Trash', $domain),
 		);
  
 
 		$args = array(
-			'label'               => __( 'Pop-Up CC - Close FREE', $domain),
+			'label'               => __( 'Pop-Up CC Exit Free', $domain),
 			'description'         => __( '', $domain),
 			'labels'              => $labels,
 			'supports'            => array( 'title' ),
