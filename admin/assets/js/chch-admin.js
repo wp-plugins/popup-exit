@@ -66,13 +66,13 @@ jQuery(document).ready(function($) {
         id: id
 
       },
-      success: function(data) { 
+      success: function(data) {
 
         if (!$('#' + template + '-css').length) {
           $('head').append('<link rel="stylesheet" id="' + template + '-css"  href="' + chch_pfc_ajax_object.chch_pop_up_url + 'public/templates/' + base + '/' + template + '/css/style.css" type="text/css" media="all" />');
         }
-        
-        
+
+
         if (!$('#chch-pcp-css').length) {
           $('head').append('<link rel="stylesheet" id="chch-pcp-css"  href="' + chch_pfc_ajax_object.chch_pop_up_url + 'public/templates/m-1/css/base.css" type="text/css" media="all" />');
         }
@@ -267,8 +267,7 @@ jQuery(document).ready(function($) {
   $('.cc-pu-image-upload').click(function(e) {
 
     e.preventDefault();
-    var target = $(this).attr('data-target');
-
+    target = $(this).attr('data-target');
     //If the uploader object has already been created, reopen the dialog
     if (custom_uploader) {
       custom_uploader.open();

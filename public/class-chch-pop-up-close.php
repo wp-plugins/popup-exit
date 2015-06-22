@@ -25,7 +25,7 @@ class ChChPopUpClose {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/** 
 	 *
@@ -255,6 +255,14 @@ class ChChPopUpClose {
 					if(in_array('chch_woocommerce_category', $pages)) {
 						if(function_exists('is_product_category')){ 
 							if(is_product_category()){ 
+								continue;		
+							}
+						}  	
+					}
+          
+          if(in_array('chch_woocommerce_products', $pages)) {
+						if(function_exists('is_product')){ 
+							if(is_product()){ 
 								continue;		
 							}
 						}  	

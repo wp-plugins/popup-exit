@@ -318,7 +318,7 @@ class ChChPopUpCloseAdmin {
 						'month'     => __( 'Month', $domain  ),
 						'year'     => __( 'Year', $domain  ),
 					),
-					'default' => 'session',
+					'default' => 'refresh',
 					
 				),   
 			), 
@@ -402,23 +402,31 @@ class ChChPopUpCloseAdmin {
 		 ?>
 		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>[]" id="<?php echo $field_args['_id']; ?>" multiple="multiple">	
 			<?php 
-			$selected = '';
+			$h_selected = '';
+      $ws_selected = '';
+      $wc_selected = '';
+      $wpr_selected = '';
 			if(!empty($escaped_value) && is_array($escaped_value)){
 				if(in_array( 'chch_home',$escaped_value)) {
-					$selected = 'selected';	
+					$h_selected = 'selected';	
 				}
 				if(in_array( 'chch_woocommerce_shop',$escaped_value)) {
-					$selected = 'selected';	
+					$ws_selected = 'selected';	
 				}
 				
 				if(in_array( 'chch_woocommerce_category',$escaped_value)) {
-					$selected = 'selected';	
+					$wc_selected = 'selected';	
+				}
+        
+        if(in_array( 'chch_woocommerce_products',$escaped_value)) {
+					$wpr_selected = 'selected';	
 				}
 			}
 			?>
-			<option value="chch_home" <?php echo $selected ?>>Home (Latest Posts)</option>
-    	<option value="chch_woocommerce_shop" <?php echo $selected ?>>Woocommerce (Shop Page)</option>
-    	<option value="chch_woocommerce_category" <?php echo $selected ?>>Woocommerce (Category Page)</option>
+			<option value="chch_home" <?php echo $h_selected ?>>Home (Latest Posts)</option>
+    	<option value="chch_woocommerce_shop" <?php echo $ws_selected; ?>>Woocommerce (Shop Page)</option>
+    	<option value="chch_woocommerce_category" <?php echo $wc_selected; ?>>Woocommerce (Category Page)</option>
+      <option value="chch_woocommerce_products" <?php echo $wpr_selected; ?>>Woocommerce (Single Product)</option>
 		<?php
 			foreach($all_pages as $value => $title):
 				$selected = '';
@@ -609,10 +617,7 @@ class ChChPopUpCloseAdmin {
 		   '_builtin' => true
 		);
 		
-		$post_types = get_post_types('','names');
-		if(($key = array_search('chch-pfc', $post_types)) !== false) {
-			unset($post_types[$key]);
-		}
+		$post_types = get_post_types($args); 
 		
         $args = array(
 			'post_type' => $post_types,

@@ -81,8 +81,8 @@ class ChChPFCTemplate {
       */ 
      
 		$css .= $this->build_css_regule($prefix.' .modal-inner',array('background-color' => $options['background']['color']));
-		
-    switch ( $background_options['type']) {
+	 
+    switch ( $options['background']['type']) {
       case 'image':
 				$css .= $this->build_css_regule($prefix.' .modal-inner',array('background-image' => $options['background']['image'],'background-size' => 'cover'));  
         break;

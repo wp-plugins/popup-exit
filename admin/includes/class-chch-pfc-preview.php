@@ -10,7 +10,8 @@
  * @copyright 2014 
  */
 
-if ( !class_exists( 'ChChPFCTemplate' ) ) require_once ( CHCH_PFC_PLUGIN_DIR . 'public/includes/class-chch-pfc-template.php' );
+if ( !class_exists( 'ChChPFCTemplate' ) )
+  require_once ( CHCH_PFC_PLUGIN_DIR . 'public/includes/class-chch-pfc-template.php' );
 
 /**
  * @package ChChPopUpClosePostType
@@ -47,16 +48,15 @@ class ChChPFCLivePreview {
    */
   public function build_preview() {
 
-    echo '<div class="cc-pu-customize-form" id="cc-pu-customize-form-'.$this->template_id.'" style="display:none;">';
+    echo '<div class="cc-pu-customize-form" id="cc-pu-customize-form-' . $this->template_id . '" style="display:none;">';
 
-    echo '<div class="cc-pu-customize-controls">'; 
+    echo '<div class="cc-pu-customize-controls">';
 
     //preview options header
     echo '
 			<div class="cc-pu-customize-header-actions">
 				<input name="publish" id="publish-customize" class="button button-primary button-large" value="Save &amp; Close" accesskey="p" type="submit" />  
-				<a class="cc-pu-customize-close" href="#" data-template="'.$this->template_id.
-      '">
+				<a class="cc-pu-customize-close" href="#" data-template="' . $this->template_id . '">
 					<span class="screen-reader-text">Close</span>
 				</a> 
 		</div>';
@@ -67,8 +67,7 @@ class ChChPFCLivePreview {
     //preview customize info
     echo '<div class="cc-pu-customize-info">
 				<span class="preview-notice">
-					You are customizing <strong class="template-title">'.$this->template_name.
-      ' Template</strong>
+					You are customizing <strong class="template-title">' . $this->template_name . ' Template</strong>
 				</span>
 			</div><!--#customize-info-->';
 
@@ -84,14 +83,12 @@ class ChChPFCLivePreview {
 			</div><!--.cc-pu-options-overlay-->
 		</div><!--#cc-pu-customize-controls-->';
 
-    echo '<div id="cc-pu-customize-preview-'.$this->template_id.
-      '" class="cc-pu-customize-preview" style="position:relative;">';
+    echo '<div id="cc-pu-customize-preview-' . $this->template_id . '" class="cc-pu-customize-preview" style="position:relative;">';
 
     echo '</div>';
     echo '</div>';
 
   }
-
 
   private function build_options() {
 
@@ -101,24 +98,17 @@ class ChChPFCLivePreview {
         array(
           'option_group' => 'size',
           'title' => 'Size',
-          'fields' => array( 
-              array(
-							'type'	 => 'select_class_switcher',
-							'name'   => 'size',
-							'target' => '.pop-up-cc',
-							'desc'   => 'Size:',
-							'options' => array(
-								'chch-close-small' => 'Small',
-								'chch-close-big' => 'Big'
-							)
-              ),
-              
-						),
+          'fields' => array( array(
+              'type' => 'select_class_switcher',
+              'name' => 'size',
+              'target' => '.pop-up-cc',
+              'desc' => 'Size:',
+              'options' => array( 'chch-close-small' => 'Small', 'chch-close-big' => 'Big' ) ), ),
           ),
         array(
-          'option_group'=> 'none',
-					'title'=> 'Overlay',
-					'disable' => true,
+          'option_group' => 'none',
+          'title' => 'Overlay',
+          'disable' => true,
           'fields' => array(
             array(
               'type' => 'color_picker',
@@ -142,13 +132,13 @@ class ChChPFCLivePreview {
         ),
       );
 
-    $fields['borders'] = array( 
-			'name' => 'Border',
-      'field_groups' => array(array( 
-          
-					'option_group'=> 'none',
-					'title'=> 'Borders',
-					'disable' => true,
+    $fields['borders'] = array(
+      'name' => 'Border',
+      'field_groups' => array( array(
+
+          'option_group' => 'none',
+          'title' => 'Borders',
+          'disable' => true,
           'fields' => array(
             array(
               'type' => 'slider',
@@ -195,10 +185,9 @@ class ChChPFCLivePreview {
           ), ),
       );
 
-
     $fields['background'] = array(
       'name' => 'Background',
-      'field_groups' => array(array(
+      'field_groups' => array( array(
           'option_group' => 'background',
           'title' => 'Background',
           'fields' => array(
@@ -225,7 +214,7 @@ class ChChPFCLivePreview {
                 array(
                   'section_title' => 'Background Image',
                   'section_id' => 'image',
-                  'fields' => array(array(
+                  'fields' => array( array(
                       'type' => 'upload',
                       'name' => 'image',
                       'target' => '.modal-inner',
@@ -266,21 +255,19 @@ class ChChPFCLivePreview {
       );
 
     $fields['fonts'] = array(
-			'name'=> 'Fonts and Colors', 
+      'name' => 'Fonts and Colors',
       'field_groups' => array(
         array(
-          
-			'option_group'=> 'none',
-			'disable' => true,
+
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Header',
           'fields' => array(
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							),
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Header Font:',
               ),
             array(
@@ -293,18 +280,16 @@ class ChChPFCLivePreview {
             ),
           ),
         array(
-          
-			'option_group'=> 'none',
-			'disable' => true,
+
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Subheader',
           'fields' => array(
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							),
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Subheader Font:',
               ),
             array(
@@ -317,18 +302,16 @@ class ChChPFCLivePreview {
             ),
           ),
         array(
-          
-			'option_group'=> 'none',
-			'disable' => true,
+
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Content',
           'fields' => array(
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							),
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Content Font:',
               ),
             array(
@@ -341,18 +324,16 @@ class ChChPFCLivePreview {
             ),
           ),
         array(
-          
-			'option_group'=> 'none',
-			'disable' => true,
+
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Link',
           'fields' => array(
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							),
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Font:',
               ),
             array(
@@ -369,7 +350,8 @@ class ChChPFCLivePreview {
 
     $fields['content'] = array(
       'name' => 'Content',
-      'field_groups' => array(array(
+      'field_groups' => array(
+        array(
           'option_group' => 'contents',
           'title' => 'Content',
           'fields' => array(
@@ -393,7 +375,7 @@ class ChChPFCLivePreview {
               ),
             ),
           ),
-					array(
+        array(
           'option_group' => 'left_button',
           'title' => 'Button Left',
           'fields' => array(
@@ -412,17 +394,17 @@ class ChChPFCLivePreview {
               'name' => 'header',
               'target' => '.cc-pu-btn-left span',
               'desc' => 'Button Header Text:',
-          	),
-						array(
+              ),
+            array(
               'type' => 'text',
               'action' => 'text',
               'name' => 'subheader',
               'target' => '.cc-pu-btn-left small',
               'desc' => 'Button Subheader Text:',
-          	),
+              ),
             ),
           ),
-					array(
+        array(
           'option_group' => 'right_button',
           'title' => 'Button Right',
           'fields' => array(
@@ -441,26 +423,25 @@ class ChChPFCLivePreview {
               'name' => 'header',
               'target' => '.cc-pu-btn-right span',
               'desc' => 'Button Header Text:',
-          	),
-						array(
+              ),
+            array(
               'type' => 'text',
               'action' => 'text',
               'name' => 'subheader',
               'target' => '.cc-pu-btn-right small',
               'desc' => 'Button Subheader Text:',
-          	),
+              ),
             ),
-          ), 
-				),
+          ),
+        ),
       );
-
 
     $fields['button'] = array(
       'name' => 'Buttons',
       'field_groups' => array(
         array(
-          'option_group'=> 'none',
-					'disable' => true,
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Close Button',
           'fields' => array(
             array(
@@ -480,8 +461,8 @@ class ChChPFCLivePreview {
             ),
           ),
         array(
-          'option_group'=> 'none',
-					'disable' => true,
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Global Settings',
           'fields' => array(
             array(
@@ -490,7 +471,7 @@ class ChChPFCLivePreview {
               'max' => '50',
               'step' => '1',
               'name' => 'radius',
-              'target' => 'none', 
+              'target' => 'none',
               'desc' => 'Border Radius:',
               ),
             array(
@@ -512,32 +493,28 @@ class ChChPFCLivePreview {
               'step' => '1',
               'name' => 'border_width',
               'target' => 'none',
-              'attr' => 'border-width', 
+              'attr' => 'border-width',
               'desc' => 'Border Width:',
               ),
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							), 
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Button Header Font:',
               ),
             array(
-              'type'	 => 'select', 
-							'name'   => 'font',  
-							'target' => 'none',  
-							'options' => array(
-								'Open Sans'  => 'Open Sans', 
-							), 
+              'type' => 'select',
+              'name' => 'font',
+              'target' => 'none',
+              'options' => array( 'Open Sans' => 'Open Sans', ),
               'desc' => 'Button Subheader Font:',
               ),
             ),
           ),
         array(
-          'option_group'=> 'none',
-					'disable' => true,
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Left Button',
           'fields' => array(
             array(
@@ -554,7 +531,7 @@ class ChChPFCLivePreview {
               'attr' => 'border-color',
               'desc' => 'Border Color:',
               ),
-            
+
             array(
               'type' => 'color_picker',
               'name' => 'header_color',
@@ -562,7 +539,7 @@ class ChChPFCLivePreview {
               'attr' => 'color',
               'desc' => 'Button Header Text Color:',
               ),
-            
+
             array(
               'type' => 'color_picker',
               'name' => 'subheader_color',
@@ -573,8 +550,8 @@ class ChChPFCLivePreview {
             ),
           ),
         array(
-          'option_group'=> 'none',
-					'disable' => true,
+          'option_group' => 'none',
+          'disable' => true,
           'title' => 'Right Button',
           'fields' => array(
             array(
@@ -590,14 +567,14 @@ class ChChPFCLivePreview {
               'target' => 'none',
               'attr' => 'border-color',
               'desc' => 'Border Color:',
-              ), 
+              ),
             array(
               'type' => 'color_picker',
               'name' => 'header_color',
               'target' => 'none',
               'attr' => 'color',
               'desc' => 'Button Header Text Color:',
-              ), 
+              ),
             array(
               'type' => 'color_picker',
               'name' => 'subheader_color',
@@ -610,28 +587,27 @@ class ChChPFCLivePreview {
         ),
       );
 
-
-    return $this->build_tabs($fields);
+    return $this->build_tabs( $fields );
   }
 
-  private function build_tabs($fields) {
-    if (!is_array($this->fields))
+  private function build_tabs( $fields ) {
+    if ( !is_array( $this->fields ) )
       return;
 
     $controls = '';
     $i = 0;
-    foreach ($fields as $field):
+    foreach ( $fields as $field ):
 
-      $section_name = !empty($field['name'])?$field['name'] : 'Section';
+      $section_name = !empty( $field['name'] ) ? $field['name'] : 'Section';
       $controls .= '
-				<h3 class="accordion-section-title" tabindex="'.$i.'">
-					'.$section_name.'
+				<h3 class="accordion-section-title" tabindex="' . $i . '">
+					' . $section_name . '
 					<span class="screen-reader-text">Press return or enter to expand</span> 
 				</h3>';
       $controls .= '<div class="accordion-section-content">';
 
-      foreach ($field['field_groups'] as $option):
-        $controls .= $this->build_sections($option);
+      foreach ( $field['field_groups'] as $option ):
+        $controls .= $this->build_sections( $option );
       endforeach;
       $i++;
       $controls .= '</div>';
@@ -647,47 +623,47 @@ class ChChPFCLivePreview {
    *
    * @return    $section - html
    */
-  private function build_sections($fields) {
-    if (!is_array($fields))
+  private function build_sections( $fields ) {
+    if ( !is_array( $fields ) )
       return;
 
     $section = '<div class="cc-pu-fields-wrapper">';
-		
-		if(isset($fields['disable'])){
-			$section .= '
+
+    if ( isset( $fields['disable'] ) ) {
+      $section .= '
 				<div class="cc-pu-overlay">
 					<a href="http://ch-ch.org/pupro" target="_blank">AVAILABLE IN PRO</a>
-				</div>'; 	
-		}
-		
-		$section .= '<h4>'.$fields['title'].'</h4>'; 
-		
-		foreach($fields['fields'] as $field): 
-			$type_func = 'build_field_'.$field['type'];  
-			$section .= $this->$type_func($field, $fields['option_group']);
-		endforeach; 
-		 
-		$section .= ' </div>'; 	 
-		
-		return $section;  
+				</div>';
+    }
+
+    $section .= '<h4>' . $fields['title'] . '</h4>';
+
+    foreach ( $fields['fields'] as $field ):
+      $type_func = 'build_field_' . $field['type'];
+      $section .= $this->$type_func( $field, $fields['option_group'] );
+    endforeach;
+
+    $section .= ' </div>';
+
+    return $section;
 
   }
 
   /**
-	 * Build slider field
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    $option_html - html
-	 */
-	private function build_field_slider($field, $options_group) {  
-		 
-		$option_html = '<label>';
-		$option_html .= '<span class="customize-control-title">'.$field['desc'].'</span>';
-		 				
-		$option_html .= '<script type="text/javascript">
+   * Build slider field
+   *
+   * @since     1.0.0
+   *
+   * @return    $option_html - html
+   */
+  private function build_field_slider( $field, $options_group ) {
+
+    $option_html = '<label>';
+    $option_html .= '<span class="customize-control-title">' . $field['desc'] . '</span>';
+
+    $option_html .= '<script type="text/javascript">
 						jQuery(document).ready( function ($) { 
-							 $( "#'.$this->template_id.'_'.$field['name'].'-slider" ).slider({
+							 $( "#' . $this->template_id . '_' . $field['name'] . '-slider" ).slider({
 								max: 1,
 								min: 0,
 								step: 0.1,
@@ -696,13 +672,13 @@ class ChChPFCLivePreview {
 									 
 						}); 
 						</script>
-						<div id="'.$this->template_id.'_'.$field['name'].'-slider"></div>';
-						
-		$option_html .= '</label>';	
-				
-		return $option_html;
-					 
-    }
+						<div id="' . $this->template_id . '_' . $field['name'] . '-slider"></div>';
+
+    $option_html .= '</label>';
+
+    return $option_html;
+
+  }
 
   /**
    * Build color picker field
@@ -711,54 +687,52 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  private function build_field_color_picker($field, $options_group) {
+  private function build_field_color_picker( $field, $options_group ) {
 
     $option_html = '<label class="cc-pu-option-active">';
-    $option_html .= '<span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html .= '<span class="customize-control-title">' . $field['desc'] . '</span>';
     $option_html .= '<input type="text" ';
-    $option_html .= $this->build_field_attributes($field, $options_group);
+    $option_html .= $this->build_field_attributes( $field, $options_group );
     $option_html .= '>';
     $option_html .= '</label>';
 
     return $option_html;
   }
 
-  private function build_field_revealer($field, $options_group) {
+  private function build_field_revealer( $field, $options_group ) {
 
     $options_prefix = $this->options_prefix;
     $template = $this->template_id;
 
-    $name = $options_prefix.$options_group.'_'.$field['name'];
-    $id = str_replace('_', '-', $name);
-    $target = $id.'-revealer';
+    $name = $options_prefix . $options_group . '_' . $field['name'];
+    $id = str_replace( '_', '-', $name );
+    $target = $id . '-revealer';
 
     $options = $this->template_options[$options_group];
 
-    $checked = $options[$field['name']]?'checked' : '';
+    $checked = $options[$field['name']] ? 'checked' : '';
 
-    $option_html = '<label><span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html = '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
     $option_html .= '
 		<input 
 			type="checkbox" 
-			name="'.$name.'"
-			id="'.$id.'" 
+			name="' . $name . '"
+			id="' . $id . '" 
 			class="revealer"
-			data-customize-target="'.$target.'"    
-			data-template="'.$template.'" 
-			'.$checked.'
+			data-customize-target="' . $target . '"    
+			data-template="' . $template . '" 
+			' . $checked . '
 		>';
 
     $option_html .= '</label>';
 
-    $hide = $options[$field['name']]?'' : 'hide-section';
+    $hide = $options[$field['name']] ? '' : 'hide-section';
 
-    $option_html .= '<div class="'.$hide.'" id="'.$target.'">';
+    $option_html .= '<div class="' . $hide . '" id="' . $target . '">';
 
-    foreach ($field['revaeals']['fields'] as $reveals):
-      $type_func = 'build_field_'.$reveals['type'];
-      $option_html .= $this->$type_func($reveals, $options_group);
+    foreach ( $field['revaeals']['fields'] as $reveals ):
+      $type_func = 'build_field_' . $reveals['type'];
+      $option_html .= $this->$type_func( $reveals, $options_group );
     endforeach;
 
     $option_html .= '</div>';
@@ -774,55 +748,53 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  private function build_field_revealer_group($field, $options_group) {
+  private function build_field_revealer_group( $field, $options_group ) {
 
     $options_prefix = $this->options_prefix;
     $template = $this->template_id;
 
     $option_name = $field['name'];
-    $name = $options_prefix.$options_group.'_'.$field['name'];
-    $group = $options_group.'-'.$field['name'].'-group';
+    $name = $options_prefix . $options_group . '_' . $field['name'];
+    $group = $options_group . '-' . $field['name'] . '-group';
 
     $options = $this->template_options[$options_group];
 
     $option_html = '<label>';
-    $option_html .= '<span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html .= '<span class="customize-control-title">' . $field['desc'] . '</span>';
 
     $option_html .= '<select 
-						name="'.$name.'" 
+						name="' . $name . '" 
 						class="revealer-group" 
-						data-group="'.$group.'"  
-						data-customize-target="'.$field['target'].'"  
-						data-attr="'.$field['attr'].'" 
-						data-template="'.$template.'"  
+						data-group="' . $group . '"  
+						data-customize-target="' . $field['target'] . '"  
+						data-attr="' . $field['attr'] . '" 
+						data-template="' . $template . '"  
 						> ';
 
-    if (!empty($field['options'])):
-      foreach ($field['options'] as $val => $desc):
+    if ( !empty( $field['options'] ) ):
+      foreach ( $field['options'] as $val => $desc ):
         $selected = '';
-        if ($options[$field['name']] == $val) {
+        if ( $options[$field['name']] == $val ) {
           $selected = 'selected';
         }
-        $option_html .= '<option value="'.$val.'" '.$selected.'>'.$desc.'</option> ';
+        $option_html .= '<option value="' . $val . '" ' . $selected . '>' . $desc . '</option> ';
       endforeach;
     endif;
 
     $option_html .= '</select>';
     $option_html .= '</label>';
 
-    foreach ($field['revaeals'] as $reveals):
+    foreach ( $field['revaeals'] as $reveals ):
       $hide = 'hide-section';
-      if ($this->template_options[$options_group][$option_name] == $reveals['section_id']) {
+      if ( $this->template_options[$options_group][$option_name] == $reveals['section_id'] ) {
         $hide = 'cc-pu-option-active';
       }
 
-      $option_html .= '<div class="'.$hide.' '.$group.' revealer-wrapper" id="'.$reveals['section_id'].
-        '">';
+      $option_html .= '<div class="' . $hide . ' ' . $group . ' revealer-wrapper" id="' . $reveals['section_id'] . '">';
 
-      foreach ($reveals['fields'] as $field):
-        $type_func = 'build_field_'.$field['type'];
-        $option_html .= $this->$type_func($field, $options_group);
+      foreach ( $reveals['fields'] as $field ):
+        $type_func = 'build_field_' . $field['type'];
+        $option_html .= $this->$type_func( $field, $options_group );
       endforeach;
 
       $option_html .= '</div>';
@@ -839,14 +811,13 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  private function build_field_text($field, $options_group) {
+  private function build_field_text( $field, $options_group ) {
 
     $option_html = '<label class="cc-pu-option-active">';
-    $option_html .= '<span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html .= '<span class="customize-control-title">' . $field['desc'] . '</span>';
 
     $option_html .= '<input type="text" ';
-    $option_html .= $this->build_field_attributes($field, $options_group);
+    $option_html .= $this->build_field_attributes( $field, $options_group );
     $option_html .= '>';
 
     $option_html .= '</label>';
@@ -855,29 +826,27 @@ class ChChPFCLivePreview {
 
   }
 
-  private function build_field_upload($field, $options_group) {
+  private function build_field_upload( $field, $options_group ) {
     $options_prefix = $this->options_prefix;
     $template = $this->template_id;
 
-    $name = $options_prefix.$options_group.'_'.$field['name'];
+    $name = $options_prefix . $options_group . '_' . $field['name'];
 
     $options = $this->template_options[$options_group];
 
-    $option_html = '<label><span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html = '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
     $option_html .= '<input  
 						type="text" 
-						name="'.$name.'"
-						id="'.$name.'" 
-						value = "'.$options[$field['name']].'"
+						name="' . $name . '"
+						id="' . $name . '" 
+						value = "' . $options[$field['name']] . '"
 						class="cc-pu-customize-style"
-						data-customize-target="'.$field['target'].'"  
-						data-attr="'.$field['attr'].'"  
-						data-template="'.$template.'"  
+						data-customize-target="' . $field['target'] . '"  
+						data-attr="' . $field['attr'] . '"  
+						data-template="' . $template . '"  
 						>';
-    $option_html .= '<input class="cc-pu-image-upload button" type="button" value="Upload Image" data-target="'.
-      $name.'"/>
-							<br />'.$field['desc'];
+    $option_html .= '<input class="cc-pu-image-upload button" type="button" value="Upload Image" data-target="' . $name . '"/>
+							<br />' . $field['desc'];
     $option_html .= '</label>';
     return $option_html;
 
@@ -890,49 +859,47 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  private function build_field_select($field, $options_group) {
+  private function build_field_select( $field, $options_group ) {
 
-    $option_html = '<label><span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html = '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
 
     $option_html .= '<select ';
-    $option_html .= $this->build_field_attributes($field, $options_group);
+    $option_html .= $this->build_field_attributes( $field, $options_group );
     $option_html .= '>';
 
-    $option_html .= $this->build_field_values($field, $options_group);
+    $option_html .= $this->build_field_values( $field, $options_group );
 
     $option_html .= '</select></label>';
     return $option_html;
 
   }
 
-  private function build_field_font($field, $options_group) {
+  private function build_field_font( $field, $options_group ) {
     $options_prefix = $this->options_prefix;
     $template = $this->template_id;
 
-    $name = $options_prefix.$options_group.'_'.$field['name'];
+    $name = $options_prefix . $options_group . '_' . $field['name'];
     $options = $this->template_options[$options_group];
 
-    $option_html = '<label><span class="customize-control-title">'.$field['desc'].
-      '</span>';
+    $option_html = '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
     $option_html .= '<select 
-						name="'.$name.'" 
-						data-id ="'.$options_group.'-font" 
+						name="' . $name . '" 
+						data-id ="' . $options_group . '-font" 
 						class="cc-pu-fonts cc-pu-customize-style"
-						data-customize-target="'.$field['target'].'"  
-						data-attr="'.$field['attr'].'"  
-						data-template="'.$template.'"  
+						data-customize-target="' . $field['target'] . '"  
+						data-attr="' . $field['attr'] . '"  
+						data-template="' . $template . '"  
 						> ';
 
     $fonts = $this->getFonts();
 
-    if (!empty($fonts)):
-      foreach ($fonts as $val => $desc):
+    if ( !empty( $fonts ) ):
+      foreach ( $fonts as $val => $desc ):
         $selected = '';
-        if ($options[$field['name']] == $val) {
+        if ( $options[$field['name']] == $val ) {
           $selected = 'selected';
         }
-        $option_html .= '<option value="'.$val.'" '.$selected.'>'.$desc.'</option> ';
+        $option_html .= '<option value="' . $val . '" ' . $selected . '>' . $desc . '</option> ';
       endforeach;
     endif;
     $option_html .= '</select></label>';
@@ -940,13 +907,13 @@ class ChChPFCLivePreview {
 
   }
 
-  private function build_field_editor($field, $options_group) {
+  private function build_field_editor( $field, $options_group ) {
     $options_prefix = $this->options_prefix;
     $template = $this->template_id;
 
     $options = $this->template_options[$options_group];
 
-    $name = $options_prefix.$options_group.'_'.$field['name'];
+    $name = $options_prefix . $options_group . '_' . $field['name'];
 
     ob_start();
 
@@ -958,83 +925,82 @@ class ChChPFCLivePreview {
       'tinymce' => array(
         'toolbar1' => ', bold,italic,underline,link,unlink,forecolor,undo,redo',
         'toolbar2' => '',
-        'toolbar3' => ''));
+        'toolbar3' => '' ) );
 
-    echo '<label><span class="customize-control-title">'.$field['desc'].'</span>';
-    wp_editor($options[$field['name']], $field['name'].'_'.$template, $settings);
+    echo '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
+    wp_editor( $options[$field['name']], $field['name'] . '_' . $template, $settings );
 
-    echo '</select></label>';
+    echo '</label>';
     $option_html = ob_get_clean();
     return $option_html;
 
   }
 
-  private function getFonts($sort = 'alpha') {
-    if ($fonts = get_transient(get_class($this).'_'.$sort)) {
+  private function getFonts( $sort = 'alpha' ) {
+    if ( $fonts = get_transient( get_class( $this ) . '_' . $sort ) ) {
 
     } else {
-      $fonts = $this->fetchFonts($sort);
-      set_transient(get_class($this).'_'.$sort, $fonts, 604800); // week
+      $fonts = $this->fetchFonts( $sort );
+      set_transient( get_class( $this ) . '_' . $sort, $fonts, 604800 ); // week
     }
     return $fonts;
   }
 
-  private function fetchFonts($sort = 'alpha') {
+  private function fetchFonts( $sort = 'alpha' ) {
 
-    $google_api_url = 'https://www.googleapis.com/webfonts/v1/webfonts?&sort='.$sort;
-    $response = wp_remote_retrieve_body(wp_remote_get($google_api_url, array('sslverify' => false)));
+    $google_api_url = 'https://www.googleapis.com/webfonts/v1/webfonts?&sort=' . $sort;
+    $response = wp_remote_retrieve_body( wp_remote_get( $google_api_url, array( 'sslverify' => false ) ) );
 
     $fallback = false;
-    if ($response && !is_wp_error($response)) {
-      $data = json_decode($response, true);
-      if (isset($data['error'])) {
+    if ( $response && !is_wp_error( $response ) ) {
+      $data = json_decode( $response, true );
+      if ( isset( $data['error'] ) ) {
         $fallback = true;
       }
     } else {
       $fallback = true;
     }
 
-    if ($fallback) {
-        $font_list_file = CHCH_PUC_PLUGIN_DIR. 'admin/assets/js/api-fallback.json';
-          $font_file_handle = fopen($font_list_file, "r");
-          $contents = fread($font_file_handle, filesize($font_list_file));
-          fclose($font_file_handle); 
-          $data = json_decode($contents, true); 
+    if ( $fallback ) {
+      $font_list_file = CHCH_PUC_PLUGIN_DIR . 'admin/assets/js/api-fallback.json';
+      $font_file_handle = fopen( $font_list_file, "r" );
+      $contents = fread( $font_file_handle, filesize( $font_list_file ) );
+      fclose( $font_file_handle );
+      $data = json_decode( $contents, true );
     }
 
     $items = $data['items'];
     $fonts = array();
-    foreach ($items as $item) {
-      $fonts[str_replace(" ", "+", $item['family'])] = $item['family'];
+    foreach ( $items as $item ) {
+      $fonts[str_replace( " ", "+", $item['family'] )] = $item['family'];
     }
 
     return $fonts;
   }
-  
-  /**
-	 * Build select radio
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    $option_html - html
-	 */
-	private  function build_field_select_class_switcher($field, $options_group) {
-		$option_html = '';
 
+  /**
+   * Build select radio
+   *
+   * @since     1.0.0
+   *
+   * @return    $option_html - html
+   */
+  private function build_field_select_class_switcher( $field, $options_group ) {
+    $option_html = '';
 
     $radio_option = $this->template_options[$options_group][$field['name']];
-		$option_html = '<label><span class="customize-control-title">'.$field['desc'].'</span>';
+    $option_html = '<label><span class="customize-control-title">' . $field['desc'] . '</span>';
 
-		$option_html .= '<select class="select-class-switcher" data-old="'.$radio_option.'" ';
-		$option_html .= $this->build_field_attributes($field, $options_group);
-		$option_html .= '>';
+    $option_html .= '<select class="select-class-switcher" data-old="' . $radio_option . '" ';
+    $option_html .= $this->build_field_attributes( $field, $options_group );
+    $option_html .= '>';
 
-		$option_html .= $this->build_field_values($field, $options_group);
+    $option_html .= $this->build_field_values( $field, $options_group );
 
-		$option_html .= '</select></label>';
-		return $option_html;
+    $option_html .= '</select></label>';
+    return $option_html;
 
-	}
+  }
 
   /**
    * Return field attributes
@@ -1043,47 +1009,46 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  function build_field_attributes($atts, $options_group) {
+  function build_field_attributes( $atts, $options_group ) {
 
     $type = $atts['type'];
 
     $attributes = ' ';
 
-    if (isset($atts['name']) && !empty($atts['name'])) {
-      $name = $this->options_prefix.$options_group.'_'.$atts['name'];
+    if ( isset( $atts['name'] ) && !empty( $atts['name'] ) ) {
+      $name = $this->options_prefix . $options_group . '_' . $atts['name'];
     } else {
-      $name = $this->options_prefix.$options_group.'_field';
+      $name = $this->options_prefix . $options_group . '_field';
     }
 
-    if (isset($atts['id']) && !empty($atts['id'])) {
+    if ( isset( $atts['id'] ) && !empty( $atts['id'] ) ) {
       $id = $atts['id'];
     } else {
       $id = $name;
     }
 
     $target = '';
-    if (isset($atts['target']) && !empty($atts['target'])) {
+    if ( isset( $atts['target'] ) && !empty( $atts['target'] ) ) {
       $target = $atts['target'];
     }
 
     $unit = '';
-    if (isset($atts['unit']) && !empty($atts['unit'])) {
+    if ( isset( $atts['unit'] ) && !empty( $atts['unit'] ) ) {
       $unit = $atts['unit'];
     }
 
     $attr = '';
-    if (isset($atts['attr']) && !empty($atts['attr'])) {
+    if ( isset( $atts['attr'] ) && !empty( $atts['attr'] ) ) {
       $attr = $atts['attr'];
     }
 
-    $value = $this->build_field_values($atts, $options_group);
-
+    $value = $this->build_field_values( $atts, $options_group );
 
     $action = '';
 
-    if (isset($atts['action']) && !empty($atts['action'])) {
-      if ($atts['target'] !== 'none') {
-        switch ($atts['action']) {
+    if ( isset( $atts['action'] ) && !empty( $atts['action'] ) ) {
+      if ( $atts['target'] !== 'none' ) {
+        switch ( $atts['action'] ) {
           case 'css':
             $action = 'cc-pu-customize-style';
             break;
@@ -1093,7 +1058,7 @@ class ChChPFCLivePreview {
         }
       }
     } else {
-      switch ($type) {
+      switch ( $type ) {
         case 'color_picker':
           $action = 'cc-pu-colorpicker';
           break;
@@ -1112,36 +1077,36 @@ class ChChPFCLivePreview {
 
       }
 
-      if (($type != 'revealer' || $type != 'revealer_group' || $type != 'text') && $atts['target']
-        !== 'none') {
+      if ( ( $type != 'revealer' || $type != 'revealer_group' || $type != 'text' ) && $atts['target'] !== 'none' ) {
         $action .= ' cc-pu-customize-style';
       }
     }
 
-    if (isset($atts['class']) && !empty($atts['class'])) {
-      $action .= ' '.$atts['class'];
+    if ( isset( $atts['class'] ) && !empty( $atts['class'] ) ) {
+      $action .= ' ' . $atts['class'];
     }
 
-    $attributes .= 'name="'.$name.'" ';
-    $attributes .= 'id="'.$id.'" ';
-    $attributes .= 'class="'.$action.'" ';
-    $attributes .= 'data-template="'.$this->template_id.'" ';
-    $attributes .= 'data-customize-target="'.$target.'" ';
+    $attributes .= 'name="' . $name . '" ';
+    $attributes .= 'id="' . $id . '" ';
+    $attributes .= 'class="' . $action . '" ';
+    $attributes .= 'data-template="' . $this->template_id . '" ';
+    $attributes .= 'data-customize-target="' . $target . '" ';
 
-    if ($unit) {
-      $attributes .= 'data-unit="'.$unit.'" ';
+    if ( $unit ) {
+      $attributes .= 'data-unit="' . $unit . '" ';
     }
 
-    if ($attr) {
-      $attributes .= 'data-attr="'.$attr.'" ';
+    if ( $attr ) {
+      $attributes .= 'data-attr="' . $attr . '" ';
     }
 
     $exclude_types = array(
       'revealer',
       'revealer_group',
-      'select','select_class_switcher');
-    if (!in_array($type, $exclude_types)) {
-      $attributes .= 'value="'.$value.'" ';
+      'select',
+      'select_class_switcher' );
+    if ( !in_array( $type, $exclude_types ) ) {
+      $attributes .= 'value="' . $value . '" ';
     }
 
     return $attributes;
@@ -1154,29 +1119,29 @@ class ChChPFCLivePreview {
    *
    * @return    $option_html - html
    */
-  function build_field_values($atts, $options_group) {
+  function build_field_values( $atts, $options_group ) {
     $option = '';
-    if (isset($this->template_options[$options_group][$atts['name']])) {
+    if ( isset( $this->template_options[$options_group][$atts['name']] ) ) {
       $option = $this->template_options[$options_group][$atts['name']];
     }
 
-    switch ($atts['type']):
+    switch ( $atts['type'] ):
       case 'select':
       case 'select_class_switcher':
         $select_option = '';
-        foreach ($atts['options'] as $val => $desc):
+        foreach ( $atts['options'] as $val => $desc ):
           $selected = '';
-          if ($option == $val) {
+          if ( $option == $val ) {
             $selected = 'selected';
           }
-          $select_option .= '<option value="'.$val.'" '.$selected.'>'.$desc.'</option> ';
+          $select_option .= '<option value="' . $val . '" ' . $selected . '>' . $desc . '</option> ';
         endforeach;
         return $select_option;
         break;
 
       default:
 
-        if (!empty($option)):
+        if ( !empty( $option ) ):
           return $option;
         else:
           return '';
