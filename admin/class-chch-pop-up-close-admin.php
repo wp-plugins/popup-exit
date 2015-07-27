@@ -52,9 +52,7 @@ class ChChPopUpCloseAdmin {
     add_filter( 'cmb2_render_chch_pfc_pages_select', array( $this, 'chch_pfc_render_pages_select' ), 10, 5 );
     add_filter( 'cmb2_render_chch_pfc_cookie_select', array( $this, 'chch_pfc_render_cookie_select' ), 10, 5 );
 
-    // remove help tabs
-    add_filter( 'contextual_help', array( $this, 'chch_pfc_remove_help_tabs' ), 999, 3 );
-    add_filter( 'screen_options_show_screen', '__return_false' );
+     
 
     // Templates view
     add_action( 'edit_form_after_title', array( $this, 'chch_pfc_templates_view' ) );
@@ -259,7 +257,7 @@ class ChChPopUpCloseAdmin {
     $prefix = '_chch_pfc_';
 
     $general_metabox = new_cmb2_box( array(
-      'id' => 'chch-pfc_-metabox-general',
+      'id' => 'chch-pfc-metabox-general',
       'title' => __( 'GENERAL', $domain ),
       'object_types' => array( 'chch-pfc' ),
       'priority' => 'low',
@@ -421,18 +419,7 @@ class ChChPopUpCloseAdmin {
 
   }
 
-  /**
-   * Remove help tabs from post view.
-   *
-   * @since     1.0.7
-   * 
-   */
-  function chch_pfc_remove_help_tabs( $old_help, $screen_id, $screen ) {
-    if ( 'post' == $screen->base && 'chch-pfc' === $screen->post_type ) {
-      $screen->remove_help_tabs();
-      return $old_help;
-    }
-  }
+  
 
   /**
    * Return list of templates
